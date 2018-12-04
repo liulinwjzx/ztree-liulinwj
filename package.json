@@ -1,0 +1,11 @@
+{
+  "name": "ztree-liulinwj",
+  "version": "0.0.1",
+  "description": "A skin for zTree",
+  "main": "ztree-liulinwj.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liulinwj",
+  "license": "MIT"
+}

@@ -1,0 +1,167 @@
+/**
+ * @author Liulinwj
+ * @licence MIT
+ */
+ .ztree.ztree-liulinwj {
+  overflow: auto;
+}
+
+.ztree-liulinwj-compact li {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ztree-liulinwj-compact *:before,
+.ztree-liulinwj-compact *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: padding-box;
+}
+
+.ztree-liulinwj-folder {
+  --liulinwj-item-height: 22px;
+  --liulinwj-item-padding-top: 5px;
+  --liulinwj-item-padding-bottom: 0;
+  --liulinwj-item-padding-top-first-type: 7px;
+
+  --liulinwj-control-and-icon-offset-down: 9px;
+
+  --liulinwj-control-left-space: 10px;
+  --liulinwj-control-width: 7px;
+  --liulinwj-control-color: #777777;
+  --liulinwj-control-font-size: 1.3em;
+
+  --liulinwj-icon-right-space: 5px;
+  --liulinwj-icon-font-size: 1.2em;
+  --liulinwj-icon-color: #777777;
+
+  --liulinwj-text-color: #777777;
+}
+
+.ztree-liulinwj-accordion {
+  /* TODO */
+}
+
+
+
+.ztree-liulinwj {
+  --liulinwj-text-color-background: transparent;
+  --liulinwj-text-color-selected: auto;
+}
+
+.ztree-liulinwj-select-primary {
+  --liulinwj-text-color-background: #007bff;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+.ztree-liulinwj-select-secondary {
+  --liulinwj-text-color-background: #6c757d;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+.ztree-liulinwj-select-success {
+  --liulinwj-text-color-background: #28a745;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+.ztree-liulinwj-select-danger {
+  --liulinwj-text-color-background: #dc3545;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+.ztree-liulinwj-select-warning {
+  --liulinwj-text-color-background: #ffc107;
+  --liulinwj-text-color-selected: #000000;
+}
+
+.ztree-liulinwj-select-info {
+  --liulinwj-text-color-background: #17a2b8;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+.ztree-liulinwj-select-light {
+  --liulinwj-text-color-background: #f8f9fa;
+  --liulinwj-text-color-selected: #000000;
+}
+
+.ztree-liulinwj-select-dark {
+  --liulinwj-text-color-background: #343a40;
+  --liulinwj-text-color-selected: #ffffff;
+}
+
+
+/* Render begin */
+
+.ztree.ztree-liulinwj li {
+  min-height: var(--liulinwj-item-height);
+  padding-top: var(--liulinwj-item-padding-top);
+  padding-bottom: var(--liulinwj-item-padding-bottom);
+
+}
+
+
+.ztree.ztree-liulinwj li:first-of-type {
+  padding-top: var(--liulinwj-item-padding-top-first-type);
+}
+
+.ztree.ztree-liulinwj li span.button {
+  position: relative;
+  top: var(--liulinwj-control-and-icon-offset-down);
+  background-image: none;
+}
+
+.ztree.ztree-liulinwj li span.button.switch {
+  padding-right: var(--liulinwj-control-right-space);
+}
+
+.ztree.ztree-liulinwj li span.button.switch::before {
+  margin-left: var(--liulinwj-control-left-space);
+  font-size: var(--liulinwj-control-font-size);
+  color: var(--liulinwj-control-color);
+}
+.ztree.ztree-liulinwj li span.button[treenode_switch] {
+  padding-right: var(--liulinwj-control-width);
+}
+
+.ztree.ztree-liulinwj li span.button.ico_loading {
+  position: static;
+  width: 0;
+}
+
+.ztree.ztree-liulinwj li span.button.ico_loading::before {
+  position: relative;
+  top: 9px;
+  left: -1px;
+  background-color: transparent!important;
+}
+
+.ztree.ztree-liulinwj li span.button[treenode_ico] {
+  font-size: var(--liulinwj-icon-font-size);
+  padding-right: calc(25px + var(--liulinwj-icon-right-space));
+}
+
+.ztree.ztree-liulinwj li span.button[treenode_ico]::before {
+  padding-left: 10px;
+  color: var(--liulinwj-icon-color);
+}
+
+.ztree.ztree-liulinwj li a:hover {
+  text-decoration: none;
+}
+
+.ztree.ztree-liulinwj .node_name {
+  color: var(--liulinwj-text-color);
+  font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+
+.ztree.ztree-liulinwj li a.curSelectedNode,
+.ztree.ztree-liulinwj li a.curSelectedNode .button::before,
+.ztree.ztree-liulinwj li a.curSelectedNode .node_name {
+  border-color: transparent;
+  border-left: none;
+  border-radius: 3px;
+  color: var(--liulinwj-text-color-selected);
+  background-color: var(--liulinwj-text-color-background);
+}
