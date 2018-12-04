@@ -70,7 +70,6 @@
     ztree._z.view.makeNodeIcoClass = function(setting, node) {
       let result = makeNodeIcoClass(setting, node);
       if (result.includes("ico_docu")) {
-        console.info(1, node.icon);
         return result + " " + (node.icon || ZTREE_ICON_DOC);
       }
       if (result.includes("ico_close")) {
